@@ -1,0 +1,237 @@
+\documentclass[11pt,oneside]{article}
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+
+\usepackage{url}
+
+\pagestyle{empty}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
+
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+% Name and contact information
+\newcommand{\name}{Alan Ritter}
+\newcommand{\addr}{625 N. Garden \#101, Bellingham WA 98225}
+\newcommand{\phone}{(360) 820-1090}
+\newcommand{\email}{ritter.alan@gmail.com}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New commands and environments
+
+% This defines how the name looks
+\newcommand{\bigname}[1]{
+	\begin{center}\fontfamily{phv}\selectfont\Huge\scshape#1\end{center}
+}
+
+% A ressection is a main section (<H1>Section</H1>)
+\newenvironment{ressection}[1]{
+	\vspace{4pt}
+	{\fontfamily{phv}\selectfont\Large#1}
+	\begin{itemize}
+	\vspace{3pt}
+}{
+	\end{itemize}
+}
+
+% A resitem is a simple list element in a ressection (first level)
+\newcommand{\resitem}[1]{
+	\vspace{-4pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A ressubitem is a simple list element in anything but a ressection (second level)
+\newcommand{\ressubitem}[1]{
+	\vspace{-1pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A resbigitem is a complex list element for stuff like jobs and education:
+%  Arg 1: Name of company or university
+%  Arg 2: Location
+%  Arg 3: Title and/or date range
+\newcommand{\resbigitem}[3]{
+	\vspace{-5pt}
+	\item
+	\textbf{#1}---#2 \\
+	\textit{#3}
+}
+
+% This is a list that comes with a resbigitem
+\newenvironment{ressubsec}[3]{
+	\resbigitem{#1}{#2}{#3}
+	\vspace{-2pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+% This is a simple sublist
+\newenvironment{reslist}[1]{
+	\resitem{\textbf{#1}}
+	%\vspace{-5pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Now for the actual document:
+
+\begin{document}
+
+\fontfamily{ppl} \selectfont
+
+% Name with horizontal rule
+\bigname{\name}
+
+\vspace{-8pt} \rule{\textwidth}{1pt}
+
+\vspace{-1pt} {\small\itshape \addr \hfill \phone; \email}
+
+\vspace{8 pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Objective}
+  \ressubitem{Seeking a full-time job starting after December 2006}
+\end{ressection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Education}
+
+  \begin{ressubsec}{Bachelor of Science}{Computer Science}{Western Washington University}
+    \ressubitem{Minor in Mathematics}
+    \ressubitem{GPA: 4.00 (overall)}
+    \ressubitem{Graduation Date: December, 2005}
+  \end{ressubsec}
+
+  \begin{ressubsec}{Master of Science}{Computer Science}{Western Washington University}
+    \ressubitem{Projected Graduation Date: December 2006}
+  \end{ressubsec}
+
+\end{ressection}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Areas of Interest}
+  \ressubitem{Operating System Internals, Device Drivers, Distributed Operating Systems, Parallel Computation, Programming Languages/Compilers, Natural Language Processing}
+\end{ressection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Google Summer of Code Grant}
+  \begin{reslist}{Ported FreeBSD's NDIS Compatibility Layer and Driver to NetBSD}
+    \ressubitem{Creates a NetBSD network driver from Windows .inf and .sys files}
+    \ressubitem{Extensive kernel-level programming}
+    \begin{reslist}{Currently tested and working for two network cards}
+      \ressubitem{Intel EtherExpress Pro/100}
+      \ressubitem{Dell (Broadcom) TrueMobile (NetBSD previously had no driver)}
+    \end{reslist}
+    \ressubitem{Article Published in January 2005 Issue of Doctor Dobbs Journal}
+    \ressubitem{Mentor/Professor: Phil Nelson (\url{phil@cc.wwu.edu})}
+    \ressubitem{More info available at \url{http://netbsd-soc.sourceforge.net/projects/ndis/}}
+    \ressubitem{Recently imported into the NetBSD source tree}
+    \ressubitem{Currently a NetBSD developer (commit access)}
+  \end{reslist}
+\end{ressection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Programming Experience}
+
+  \begin{reslist}{Some examples of software I've written over the course of my studies:}
+  \begin{reslist}{Compiler for a block structured programming language}
+    \ressubitem{Includes nested, and overloaded functions}
+    \ressubitem{Written in C using Lex and Yacc}
+  \end{reslist}
+  \begin{reslist}{UNIX shell}
+    \ressubitem{Features include: pipes, backquotes, as well as \emph{if} and \emph{while} statements}
+  \end{reslist}
+%\begin{reslist}{Program that displays 3D objects}
+%  \ressubitem{Written from scratch (no 3D API, only GDI+)}
+%\end{reslist}
+% \begin{reslist}{Program that draws fractal plants using L-systems}
+%   \ressubitem{Written in C\# using Windows Forms}
+% \end{reslist}
+  %\begin{reslist}{A Ray tracer}
+  %  \resitem{Displays spheres, cylinders, and cubes}
+  %\end{reslist}
+%  \resitem{\textbf{A Ray tracer}}
+ % \begin{reslist}{Interpreter for a Scheme-like language}
+    %\resitem{Includes \emph{lambda} expressions (function definitions)}
+  %\end{reslist}
+%  \resitem{\textbf{Interpreter for a Scheme-like language}}
+   \begin{reslist}{Device Drivers}
+    \begin{reslist}{Analog to digital converter card (PCI-DAS08)}
+    \ressubitem{Wrote drivers for both NetBSD and Windows XP}
+    \ressubitem{Wrote a graphical oscilloscope program using fltk to test the drivers}
+    \end{reslist}
+    \begin{reslist}{Digital I/O board (PCI-DIO24)}
+      \ressubitem{Wrote a driver for FreeBSD}
+      \ressubitem{Application software and wiring to control 7-segment display
+	and LEDs}
+    \end{reslist}
+  \end{reslist}
+% \begin{reslist}{Integrated scripting support into a DirectX menu API with Lua}
+%   \ressubitem{Part of a group project, included documentation and presentation}
+ %\end{reslist}
+  \end{reslist}
+
+\end{ressection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Publications}
+  \begin{reslist}{Accepted}
+    \ressubitem{\emph{J. Michael Meehan, Alan L. Ritter}. Tuning openMosix Load Balancing Parameters using a Genetic Algorithm, MFCSIT'06}
+  \end{reslist}
+  \begin{reslist}{Submitted}
+    \ressubitem{\emph{Alan L. Ritter, James W. Hearne, Philip A. Nelson}. Distributional Word Clustering in Parallel, PDCS-2006 (Awaiting notification of acceptance)}
+  \end{reslist}
+\end{ressection}
+
+\begin{ressection}{Employment}
+  \begin{reslist}{Graduate Teaching Assistantship, WWU (Spring/Fall, 2006)}
+    \ressubitem{Teaching an introductory programming lab}
+    \ressubitem{Grading student programs}
+  \end{reslist}
+
+  \begin{reslist}{Grader, WWU (Winter, 2005)}
+    \ressubitem{Graded programming assignments}
+  \end{reslist}
+  
+  \begin{reslist}{Internship, Naval Research Laboratory, Monterey CA (For summer 2006)}
+    \ressubitem{Will optimize Fortran MPI code the the Data Assimilation
+      Section}
+  \end{reslist}
+  
+\end{ressection}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Skills}
+
+	\resitem{\textbf{Operating Systems:} BSD, Linux, Windows 98/2000/XP/etc...}
+ 
+	\begin{reslist}{Programming Languages I have experience with:}
+		\ressubitem{C, C++, C\#, i386 assembler, Common Lisp, Scheme, Lua, ML, Perl, Fortran, Ada}
+	\end{reslist}
+
+	\begin{reslist}{APIs with which I am familiar:}
+	  \ressubitem{Win32, POSIX, Windows Forms/.NET, OpenGL, fltk, Lua C API, pthreads, MPI}
+	\end{reslist}
+
+	\begin{reslist}{Tools I enjoy using:}
+	  \ressubitem{\textbf{UNIX tools:} Lex, Yacc, \LaTeX, CVS/Subversion, Make, gcc, gdb, emacs, etc...}
+	  \ressubitem{\textbf{Windows:} Visual Studio .NET, MS Office, Visio, etc...}
+	\end{reslist}
+
+\end{ressection}
+
+\begin{ressection}{Scholarships and Awards}
+  \resitem{Departmental Tuition Waiver (2003-04)}
+  \resitem{WWU Class of 2006 Outstanding Graduate in Computer Science}
+\end{ressection}
+
+\end{document}
