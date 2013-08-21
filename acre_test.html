@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+ "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+
+<acre:script>
+  var q = [{
+    "type":   "/business/acquisition",
+    "parent": null,
+    "child":  null
+  }];
+  
+  var o = acre.freebase.mqlread(q);
+</acre:script>
+
+<body>
+
+<ul acre:if="o.result.length != 0">
+  <li acre:for="a, acquisition in o.result"><table>
+    <tr><th>parent:</th>
+      <td>${acquisition['parent']}</td>
+    </tr>
+    <tr><th>child:</th>
+      <td>${acquisition['child']}</td>
+    </tr>
+  </table></li>
+</ul>
+<div acre:else=""><ins>[no element]</ins></div>
+
+</body>
+</html>

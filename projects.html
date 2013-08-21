@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Alan Ritter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="./bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="./bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="./bootstrap/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./bootstrap/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./bootstrap/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./bootstrap/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="./bootstrap/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="index.html">Alan Ritter</a>
+
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li class="active"><a href="projects.html">Projects</a></li>
+              <li><a href="publications.html">Publications</a></li>
+              <li><a href="software.html">Software</a></li>
+              <li><a href="application_materials/alan_ritter_CV.pdf">C.V.</a></li>
+              <!-- <li><a href="application.html">Job Application Materials</a></li> -->
+              <!-- <li><a href="travel.html">Upcoming Travel</a></li> -->
+            </ul>
+
+          <div class="nav-collapse">
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+<h1>Projects</h1>
+<h3>Information Extraction in Social Media</h3>
+<div class="well">
+<p>
+Status Messages written by users of Social Media websites (e.g. Facebook and Twitter)
+contain a great deal of timely and important information, however there are also many irrelevant and redundant messages 
+which can easily lead to <b>information overload</b>.  No person can read each of 
+the hundreds of millions of messages produced every day, motivating
+the need for systems which can automatically <b>extract and aggregate important information</b> 
+from these <b>dynamically changing text streams</b>.
+</p>
+<p>
+Off-the shelf tools such as Part of Speech Taggers and Named Entity Recognizers perform poorly when applied to Social Media text due to its noisy and unique style.  
+To address this I have been working towards building a set of <a href="http://github.com/aritter/twitter_nlp">Twitter-specific text processing tools</a> <a href="http://aclweb.org/anthology-new/D/D11/D11-1141.pdf">[EMNLP 2011a]</a>.
+</p>
+<p>
+Users of Social Media sites frequently discuss events which will
+occur in the future.
+By annotating Named Entities and resolving temporal expressions (for example "next Friday"), we are able to automatically
+extract a <a href="http://statuscalendar.com">calendar of popular events occurring in the near future</a> from Twitter <a href='rt080-ritter.pdf'>[KDD 2012]</a>.
+</p>
+<p>
+A recent talk on this work can be viewed <a href="kdd12.mp4">here</a>.
+</p>
+</div>
+
+<h3>Conversational Modeling in Social Media</h3>
+<div class="well">
+<p>
+In addition to discussing upcoming events, users of social networking sites are having public conversations at an unprecedented scale.  This presents a unique opportunity
+to collect millions of naturally occuring conversations and investigate new <b>data-driven techniques for conversational modeling</b>.
+</p>
+<p>
+I have worked on unsupervised modeling of dialogue acts in Twitter <a href="http://www.cs.washington.edu/homes/aritter/twitter_chat.pdf">[NAACL 2010]</a>.  By remaining agnostic about the set of classes, we are
+able to learn a model which provides insight into the nature of communication in a new medium.
+</p>
+<p>
+I have investigated the feasibility of automatically replying to status messages by adapting techniques 
+from <b>Statistical Machine Translation</b> <a href="mt_chat.pdf">[EMNLP 2011b]</a>, using millions of naturally occurring Twitter conversations 
+as parallel text.
+Although there are many differences between conversation and translation, with a few conversation-specific adaptations we
+are able to build response models which <a href="http://www.cs.washington.edu/homes/aritter/mt_chat.html">often generate appropriate replies to Twitter status posts</a>.
+This work has several possible applications, including <a href="http://aclweb.org/anthology-new/D/D12/D12-1136.pdf">conversationally aware predictive text entry</a>.
+</p>
+<p>
+A recent talk on this work can be viewed <a href="http://research.microsoft.com/apps/video/default.aspx?id=154473">here</a>.
+</p>
+</div>
+
+<h3>Latent Variable Models of Lexical Semantics</h3>
+<div class="well">
+<p>
+I have applied a variant of <b>Latent Dirichlet Allocation</b> to automatically infer the argument types or <b>Selectional Preferences</b> of
+textual relations <a href="http://www.aclweb.org/anthology-new/P/P10/P10-1044.pdf">[ACL 2010]</a>.  Generative models have the advantage that they provide a principled way to perform many different kinds of probabilistic queries about the data.  For example, our model of selectional preferences is useful in filtering improper applications of inference rules in context, showing a substantial improvement over a state-of-the-art rule-filtering system which makes use of a predefined set of classes.
+The topics discovered by our model can be browsed <a href="http://rv-n12.cs.washington.edu:1234/lda_sp_demo_v3/lda_sp/topics/">here</a>.  Inference and evaluation code is available for download <a href="https://github.com/aritter/LDA-SP">here</a>.
+</p>
+<p>
+In addition, I have applied latent variable models to automatically induce an appropriate set of categories for events extracted from Twitter <a href='rt080-ritter.pdf'>[KDD 2012]</a>.  
+By leveraging large quantities of unlabeled data we are able to outperform a supervised baseline at the task of categorizing extracted events using the types automatically inferred by our model.
+</p>
+<p>
+I have also investigated <b>Distant Supervision</b> with Topic Models.  As a distant source of supervision we make use of lexical entries from <a href="http://www.freebase.com/">Freebase</a>, a large, open-domain database, to generate constraints in the model.  
+This approach leverages the ambiguous supervision provided by Freebase in a principled way, significantly 
+outperforming Co-Training on a weakly supervised named entity classification task <a href="http://aclweb.org/anthology-new/D/D11/D11-1141.pdf">[EMNLP 2011a]</a>.
+</p>
+</div>
+
+<h3>Utilizing Implicit Feedback in Interactive File Selection</h3>
+<div class="well">
+Selection tasks are common in modern computer interfaces; we are often required to
+select multiple files, emails, and other data entries for copying, modification, deletion etc...
+Complex selection tasks can require many clicks and mouse movements on behalf of the user;
+to aid users with these complex selections we propose an interactive machine learning solution <a href="http://www.cs.washington.edu/homes/aritter/p167-ritter.pdf">[IUI 2009]</a>.
+In addition to making use of explicit selections and deselections, we utilize implicit 
+features of the user's behaviour such as passing over files, or proximity in the interface.
+Since the behaviour features are task-independent, we use historical interaction traces as training
+data.  A video demonstration of our file-selection prototype can be viewed <a href="http://www.youtube.com/watch?v=4V-ukMndnFo">here</a>.
+</div>
+
+<h3>Finding Contradictions in Web Text</h3>
+<div class="well">
+Many textual relations map one argument to a unique value.  For example the verb <i>assassinated</i> should map each direct object to a unique subject.  We investigate automatically
+classifying relation functionality using an unsupervised EM-style algorithm, and evaluate performance at discovering naturally occurring contradictions within a large web corpus <a href="http://www.cs.washington.edu/homes/aritter/Ritter_emnlp08.pdf">[EMNLP 2008]</a>.  We show
+that contradiction detection on the web is a difficult task for a variety of reasons including name ambiguity (e.g. John Smith was born in many different locations), synonyms and meronyms
+(Mozart was born in both Salzburg and Austria).
+</div>
+
+<h3>Interactive Information Integration with HTML Tables & Freebase</h3>
+<div class="well">
+As part of the grad databases class, I investigated applying data-integration techniques to augment HTML tables with additional data from Freebase, in addition to enabling users to quickly verify and contribute data contained in the table. Users can choose to display columns which are not present in the original table, but for which data exists in Freebase, providing direct benefit.  They can also easily verify our algorithmically generated mapping from table columns to Freebase attributes, alowing data contained in the table (but missing in Freebase) to be imported.  Details on this project including a prototype Firefox browser plugin can be found <a href="http://www.cs.washington.edu/homes/aritter/freebase_html/">here</a>.
+</div>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2879579-2";
+urchinTracker();
+</script>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster
+    <script src="bootstrap/js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap-transition.js"></script>
+    <script src="bootstrap/js/bootstrap-alert.js"></script>
+    <script src="bootstrap/js/bootstrap-modal.js"></script>
+    <script src="bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="bootstrap/js/bootstrap-scrollspy.js"></script>
+    <script src="bootstrap/js/bootstrap-tab.js"></script>
+    <script src="bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="bootstrap/js/bootstrap-popover.js"></script>
+    <script src="bootstrap/js/bootstrap-button.js"></script>
+    <script src="bootstrap/js/bootstrap-collapse.js"></script>
+    <script src="bootstrap/js/bootstrap-carousel.js"></script>
+    <script src="bootstrap/js/bootstrap-typeahead.js"></script>
+    -->
+    <script src="./bootstrap/js/bootstrap-min.js"></script>
+
+  </body>
+</html>

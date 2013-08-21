@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+ "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+</head>
+
+<body style="width:800px;margin:0px auto;">
+<script type="text/javascript" src="protovis.js"></script>
+
+<script type="text/javascript+protovis">
+var departments = {
+  nodes:[
+    {nodeName:"Marketing", group:0},
+    {nodeName:"IT", group:1},
+    {nodeName:"Engineering", group:2},
+    {nodeName:"Quality", group:3},
+    {nodeName:"BI", group:4},
+    {nodeName:"RND", group:5},
+    {nodeName:"Administrative", group:6},
+    {nodeName:"Sales", group:7},
+    {nodeName:"Legal", group:8},
+ 
+  ],
+  links:[
+    {source:1, target:0, value:4},
+    {source:1, target:2, value:3},
+    {source:1, target:3, value:5},
+    {source:1, target:4, value:15},
+    {source:1, target:6, value:2},
+    {source:1, target:7, value:13},
+    {source:6, target:0, value:1},
+    {source:6, target:2, value:1},
+    {source:6, target:3, value:1},
+    {source:6, target:4, value:1},
+    {source:6, target:7, value:1},
+    {source:0, target:7, value:17},
+    {source:2, target:3, value:15},
+    {source:2, target:4, value:9},
+    {source:2, target:5, value:1},
+    {source:3, target:5, value:1},
+    {source:8, target:0, value:9},
+    {source:8, target:1, value:2},
+    {source:8, target:7, value:1},
+ 
+  ]
+};  
+
+  var w = document.body.clientWidth,
+    h = document.body.clientHeight,
+    colors = pv.Colors.category20();
+ 
+var vis = new pv.Panel()
+    .width(w)
+    .height(h)
+    .fillStyle("white")
+    .event("mousedown", pv.Behavior.pan())
+    .event("mousewheel", pv.Behavior.zoom(3));
+ 
+var force = vis.add(pv.Layout.Force)
+    .nodes(departments.nodes)
+    .links(departments.links);
+ 
+force.link.add(pv.Line);
+ 
+force.node.add(pv.Dot)
+    .size(function(d) (d.linkDegree + 104) * Math.pow(this.scale, -1.5))
+    .fillStyle(function(d) d.fix ? "red" : colors(d.group))
+    .strokeStyle(function() this.fillStyle().darker())
+    .lineWidth(0)
+    .title(function(d) d.nodeName)
+    .event("mousedown", pv.Behavior.drag())
+    .event("drag", force);
+ 
+force.label.add(pv.Label)
+ 
+vis.render();
+</script>
+</body>
+</html>
