@@ -1,0 +1,81 @@
+<h1>Freebase/HTML tables</h1>
+
+<h3>Summary:</h3>
+Using data-integration techniques, we provide a browser extension which augments HTML tables with
+additional data from <a href="http://www.freebase.com/">Freebase</a>.  Users can choose to display columns which are not present in the
+original table, but for which data exists in Freebase, providing direct benefit. <br><br>
+Additionally, users can contribute data contained in the table to Freebase with minimal effort, by selecting from an automatically ranked
+list of possible object properties the table column could correspond to.
+
+<br>
+<a href='report.pdf'>Report</a> <br>
+
+<h3>Try it out:</h3>
+<ul>
+<li>First install the Greasemonkey FireFox extension:<br>
+<a href="https://addons.mozilla.org/en-US/firefox/addon/748">https://addons.mozilla.org/en-US/firefox/addon/748</a></li>
+
+<li>Next install our Greasemonkey Script:<br>
+<a href='http://userscripts.org/scripts/show/47888'>http://userscripts.org/scripts/show/47888</a> <br></li>
+
+<li>You can turn the HTML table augmentation on and off by either clicking on the monkey icon in the bottom right corner of the
+browser, or by enabling/disabling the script (Tools->Greasemonkey->Manage User Scripts).</li>
+
+<li>Some Disclaimers:
+  <ul>
+    <li>It can be slow on large tables</li>
+    <li>Our handling of Column Headers identification is not that great,
+      but this could be easily improved</li>
+  </ul>
+
+</ul>
+
+<h3>Contributing:</h3>
+<ul>
+<li>If you would like to contribute data from HTML tables to Freebase, you will have to edit the script with your Freebase username and password (you must have an account in the <a href="http://www.sandbox-freebase.com/">Freebase Sandbox</a>):<br>
+  <ul>
+    <li>Tools->Greasemonkey->Mange User Scripts</li>
+    <li>Highlight "Freebase HTML Tables"</li>
+    <li>Click on "Edit"</li>
+    <li>Search for the following lines:<br>
+      <b>USERNAME=""<br>
+      PASSWORD=""<br></b>
+      and enter your Freebase username and password inside the quotation marks.
+    <li>Note that it's currently configured to only make contributions to the <a href="http://www.sandbox-freebase.com/">Freebase Sandbox</a> which is wiped every Monday</li>
+  </ul>
+</ul>
+
+<h3>Example Tables</h3>
+<ul>
+<li>Following are some tables where it works fairly well:</li>
+  <ul>
+    <li><a href="http://en.wikipedia.org/wiki/Turing_Award">Turing Award Winners</a></li>
+    <li><a href="http://www.cra.org/ads/">CRA Job Announcements</a>
+    <li><a href="http://en.wikipedia.org/wiki/List_of_volcanoes_in_Russia">List of volcanoes in Russia</a></li>
+    <li><a href="http://www.infoplease.com/ipa/A0001338.html">World's Tallest Buildings</a></li>
+    <li><a href="http://www.wastedcalories.com/beercalories.html">Calories in Beer</a></li>
+    <li><a href="http://www.essex1.com/people/speer/stars.html">
+Earth's Nearest or Closest Stars</a></li>
+    <li><a href="http://www.windows.ucar.edu/tour/link=/comets/comets_table.html">Table of Comets</a></li>
+    <li><a href="http://humanknowledge.net/Philosophy/Metaphysics/Theology/Religion.html">A Table of the World's Major Religions</a></li>
+    <li><a href="http://encyclopedia.caribseek.com/Caribbean_Population_and_Languages/">Caribbean Population and Languages</a></li>
+    <li><a href="http://www.windows.ucar.edu/tour/link=/our_solar_system/moons_table.html">Table of Moons in our Solar System</a></li>
+  </ul>
+</ul>
+
+<h3>Video Demo:</h3>
+<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/eKZalHNYUgI&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="/web/20130524165215oe_/http://www.youtube.com/v/eKZalHNYUgI&hl=en&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed></object>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-2879579-5");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+</html>
