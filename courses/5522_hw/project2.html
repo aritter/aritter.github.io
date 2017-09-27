@@ -199,7 +199,7 @@ Pac-Man Projects</a> originally created by John DeNero and Dan Klein.
       <p><em>Grading</em>: Because we check your code to determine whether it explores the correct number of states, it is important that you perform alpha-beta pruning without reordering children. In other words, successor states should always be processed in the order returned by <code>GameState.getLegalActions</code>. Again, do not call&nbsp;<span style="font-family: monospace, serif;">GameState.generateSuccessor&nbsp;</span>more than necessary.</p>
       <p><b>You must <i>not</i> prune on equality in order to match the set of states explored by our autograder.</b> (Indeed, alternatively, but incompatible with our autograder, would be to also allow for pruning on equality and invoke alpha-beta once on each child of the root node, but this will <i>not</i> match the autograder.)</p>
       <p>The pseudo-code below represents the algorithm you should implement for this question.</p>
-      <div style="text-align: center; margin-bottom: 10px;"><img style="max-width: 500px;" alt="" src="files/alpha-beta-on-inequality.png" /></div>
+      <div style="text-align: center; margin-bottom: 10px;"><img style="max-width: 500px;" alt="" src="alpha-beta-on-inequality.png" /></div>
       <p>To test and debug your code, run</p>
       <pre>python autograder.py -q q3</pre>
       <p>This will show what your algorithm does on a number of small trees, as well as a pacman game. To run it without graphics, use:</p>
