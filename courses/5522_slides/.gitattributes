@@ -1,1 +1,14 @@
-*.key filter=lfs diff=lfs merge=lfs -text
+bn.key filter=lfs diff=lfs merge=lfs -text
+introduction.key filter=lfs diff=lfs merge=lfs -text
+rl1.key filter=lfs diff=lfs merge=lfs -text
+rl2.key filter=lfs diff=lfs merge=lfs -text
+search.key filter=lfs diff=lfs merge=lfs -text
+expectimax_utilities.key filter=lfs diff=lfs merge=lfs -text
+hmm2.key filter=lfs diff=lfs merge=lfs -text
+mdp1.key filter=lfs diff=lfs merge=lfs -text
+advesarial_search.key filter=lfs diff=lfs merge=lfs -text
+informed_search.key filter=lfs diff=lfs merge=lfs -text
+probability.key filter=lfs diff=lfs merge=lfs -text
+hmm.tmp.key filter=lfs diff=lfs merge=lfs -text
+markov.key filter=lfs diff=lfs merge=lfs -text
+mdp2.key filter=lfs diff=lfs merge=lfs -text
