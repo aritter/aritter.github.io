@@ -12,3 +12,5 @@ probability.key filter=lfs diff=lfs merge=lfs -text
 hmm.tmp.key filter=lfs diff=lfs merge=lfs -text
 markov.key filter=lfs diff=lfs merge=lfs -text
 mdp2.key filter=lfs diff=lfs merge=lfs -text
+hmm.ke filter=lfs diff=lfs merge=lfs -text
+hmm.key filter=lfs diff=lfs merge=lfs -text
