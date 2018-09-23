@@ -1,15 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- Le styles -->
+    <link href="./bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="./bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="./bootstrap/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./bootstrap/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./bootstrap/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./bootstrap/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="./bootstrap/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
   <body>
-    <div style="width:864px;">
-    I am always looking for ambitious and highly motivated students to work with.
-    If you are currently enrolled at Ohio State and are interested in doing research with me on natural language processing,
-    information extraction, machine learning, and/or social media analysis, feel free to send a short email with 1) your C.V. or resume
-    and 2) a brief description of what areas you are interested in and what you are hoping to get out of our interaction.
-    Generally I like to work with students who have some prior experience with
-    machine learning and/or natural language processing; having some previous interaction with me in a class
-    is a huge plus.  Students outside OSU are welcome to send email as well, but admissions decisions are made by committee.
-    I get many of these emails and unfortunately I am unable to reply to all of them - that doesn't mean I haven't read your note!
+    <div class='container'>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="index.html">Alan Ritter</a>
+
+          <ul class="nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <!-- <li><a href="projects.html">Research</a></li> -->
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="software.html">Software</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+            <!-- <li><a href="application.html">Job Application Materials</a></li> -->
+            <li><a href="application_materials/alan_ritter_CV.pdf">C.V.</a></li>
+          </ul>
+
+          <div class="nav-collapse">
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class='well'>
+    <b>Applying to OSU:</b>
+    You can find more information about our PhD program <a href='https://cse.osu.edu/graduate/phd-program'>here</a>, and instructions on applying <a href='https://cse.osu.edu/prospective-students/cse-graduate-admissions'>here</a>.      I have funding to support RA positions and I am typically looking to recruit one or two new PhD students per year.
+    Feel free to mention my name in your research statement if you are interested in working with me, and also send an email to make sure that your application doesn't get lost in the pile.  I get many of these emails, so unfortunately I don't have time to reply to all of them, but that doesn't mean I haven't read your note!
+    </div>
+
+    <div class='well'>
+    <b>Computing Resources:</b>
+    My group has dedicated high-memory, GPU and storage servers.  In addition we have access to the <a href=''>Ohio Supercomputer Center</a> which houses 160 Nvidia P100 GPUs.
+    </div>
+
+    <div class='well'>
+    <b>Life in Columbus:</b>
+    <a href='https://en.wikipedia.org/wiki/Columbus,_Ohio'>Columbus</a> is the state capitol and Ohio's second largest metropolitan area.
+    There are typically many events happening here every weekend, to see what's going on this weekend, check <a href='https://www.columbusunderground.com/tag/mega-weekend'>this link</a>.  Columbus is an affordable city to live in which is nice for those who are living on a PhD stipend.
+    </div>
+
+    <div class='well'>
+    <b>For Students who are Already Admitted to OSU:</b>
+    Feel free to send me an email with your C.V. or resume and optionally, a brief description of what areas you think we might be mutually interested in working on.  I like to recruit students who have a strong programming / math background and are also highly self-motivated; taking a course with me (and doing well) is a good place to start.  You can learn more about my group's research on my <a href='http://aritter.github.io/publications.html'>publications</a> page.
+    </div>
+
+    <div class='well'>
+    <b>Advice:</b>
+    Check out this <a href='http://www.cs.cmu.edu/~harchol/gradschooltalk.pdf'>advice on applying to grad schools</a>, <a href='https://homes.cs.washington.edu/~nasmith/advice.html'>advice on choosing a school/advisor</a> and <a href='http://www.cs.jhu.edu/~jason/advice/how-to-work-with-a-professor.html'>how to do research with a professor</a>.
+    </div>
+
     </div>
   </body>
 </html>
