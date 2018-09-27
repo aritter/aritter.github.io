@@ -9,7 +9,6 @@ def DistancesBetweenRandomPoints(D):
     data = np.random.random((N,D))
 
     dsum = 0.0
-    count = 0.0
     dlist = []
     for i in range(N):
         for j in range(N):
