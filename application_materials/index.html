@@ -1,7 +1,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Alan Ritter: Tenure Application Materials</title>
+    <title>Alan Ritter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -32,10 +32,7 @@
 
     <div class="container">
 
-<div id="Content">
-    <h1><u>Tenure Application Materials</u></h1>
-
-<p> Last update: 5/4/2019 </p>
+Last update: 5/7/2019
 
 <big>
 <div id="Content">
@@ -55,7 +52,22 @@ Curriculum Vitae: <a href='http://aritter.github.io/application_materials/alan_r
 <h3>Research Summary:</h3>
 <div class='well'>
 <p>
-XXX
+The goal of my research is to invent new methods that enable machines to better understand natural language at scale, and demonstrate the potential for new applications this will enable.  My most significant contributions can be divided into three major thrusts, which are briefly summarized below with links to selected papers:
+</p>
+
+<p>
+<b>Minimally-Supervised Machine Learning for Information Extraction:</b>
+Traditional, supervised learning methods for information extraction rely annotated corpora which are expensive and time-consuming to produce.  To address the annotation bottleneck, I have developed new methods that can more effectively learn from an existing knowledge base (KB) using distant supervision.  This approach uses heuristics to label text using facts in the KB.  A major challenge is the issue of label noise.  For example, facts that are mentioned in the text but missing in the KB lead to false negatives in the training data.  To address this issue, I proposed a novel structured learning approach that incorporates side-information through a missing data model <a href='https://aclweb.org/anthology/Q13-1030'>(Ritter et. al. TACL 2013)</a>.  More recently, I extended this approach by incorporating learned representations from convolutional neural networks, that are trained end-to-end as part of a structured SVM <a href='https://arxiv.org/pdf/1904.00118.pdf'>(Bai and Ritter NAACL 2019)</a>.  By combining the benefits of the structured learning and neural networks, our approach achieves state-of-the-art results on mention-level relation extraction, using only proposition-level supervision from a KB, without requiring any human annotations.  In addition to developing improved methods for learning from less supervision, I have explored a number of appliations of minimally supervised information extraction, for example: automatically updating Wikipedia by learning to extract events from news and social media <a href='https://dl.acm.org/citation.cfm?id=3038912.3052646'>(Konovalov et. al. WWW 2017)</a> and minimally supervised extraction of cybersecurity events from text <a href='https://aritter.github.io/twitter_security.pdf'>(Ritter et. al. WWW 2015)</a>.
+</p>
+
+<p>
+<b>Data-Driven Conversation:</b>
+I was the first to propose data-driven approaches for dialogue generation <a href='https://www.aclweb.org/anthology/D11-1054'>(Ritter et. al. EMNLP 2011)</a>, by adapting techniques from statistical machine translation.  Since then, there has been a large amount of follow-up work on data-driven approaches to dialogue.  One practical application of this technology is Gmail’s <a href='https://ai.googleblog.com/2015/11/computer-respond-to-this-email.html'>smart reply</a> feature, which used neural machine translation methods to automatically generate candidate responses to users’ emails.  One major limitation, which has been independently reported by multiple research groups working on this area is that the neural generation methods tend to produce plausible but dull responses when applied to dialogue (“I don’t know”, “sounds good”, etc.).  In collaboration with researchers at Stanford and Microsoft Research, I have explored a number of approaches to address this challenge including: reinforcement learning to generate responses which maximize the long-term success of the conversation <a href='https://aclweb.org/anthology/D16-1127'>(Li et. al. EMNLP 2016)</a>, adversarial learning to generate conversations which are more human-like <a href='https://www.aclweb.org/anthology/D17-1230'>(Li et. al. EMNLP 2017)</a>, and distributional decoding constraints that encourage neural conversation models to produce more content words and fewer function words <a href='https://aclweb.org/anthology/D18-1431'>(Baheti et. al. EMNLP 2018)</a>.
+</p>
+
+<p>
+<b>New Applications of Natural Language Processing for Analyzing Social Media:</b>
+I was one of the first researchers to recognize the importance of developing natural language processing methods customized for social media text.  I developed a set of natural language processing tools adapted to noisy Twitter text <a href='https://www.aclweb.org/anthology/D11-1141'>(Ritter et. al. EMNLP 2011)</a>, which have been used extensively by other researchers.  Since then, Social Media has become a major sub-area within the natural language processing community with dedicated tracks in our main conferences (ACL, EMNLP and NAACL).  I am a founder and organizer of the Workshop on Noisy User-Generated Text (<a href='http://noisy-text.github.io'>W-NUT</a>), an annual workshop which has been held in conjunction with ACL, Coling and EMNLP since 2015.  I have also contributed to new social media analysis applications using natural language processing technology including extracting and analyzing users’ online predictions <a href='https://aclweb.org/anthology/D17-1166'>(Swamy et. al. EMNLP 2017)</a>, and analyzing the perceived severity of software vulnerabilities that are reported online <a href='https://arxiv.org/pdf/1902.10680.pdf'>(Zong et. al. NAACL 2019)</a>.
 </p>
 </div>
 
