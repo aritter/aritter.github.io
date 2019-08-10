@@ -32,7 +32,7 @@
 
     <div class="container">
 
-Last update: 6/20/2019
+Last update: 8/10/2019
 
 <big>
 <div id="Content">
@@ -57,7 +57,7 @@ The goal of my research is to invent methods that enable machines to better unde
 
 <p>
 <b>Better Minimally-Supervised Machine Learning for Information Extraction:</b>
-Traditional supervised learning methods for information extraction rely on annotated corpora that are expensive and time-consuming to produce.  To address the annotation bottleneck, I have developed new methods that can effectively learn with less human supervision, instead learning from an existing knowledge base (KB).  This approach uses heuristics to label training corpora using facts in the KB.  A major challenge, however, is the problem of label noise.  For example, facts that are mentioned in the text but missing in the KB lead to false negatives.  To address this issue, I proposed a novel structured learning approach that incorporates side-information through a missing data model <a href='https://aclweb.org/anthology/Q13-1030'>(Ritter et. al. TACL 2013)</a>.  More recently, I extended this approach with learned representations computed using a convolutional neural network that is trained end-to-end as part of a Latent Structured SVM <a href='https://arxiv.org/pdf/1904.00118.pdf'>(Bai and Ritter NAACL 2019)</a>.  By combining the benefits of structured learning and convolutional neural networks, our approach achieves state-of-the-art results on minimally supervised mention-level relation extraction, using only proposition-level supervision from a KB, without any human annotations.  In addition to developing improved methods for learning from less supervision, I have explored a number of applications of minimally supervised information extraction, for example: automatically updating Wikipedia by learning to extract events from news and social media <a href='https://dl.acm.org/citation.cfm?id=3038912.3052646'>(Konovalov et. al. WWW 2017)</a> and minimally supervised extraction of cybersecurity events <a href='https://aritter.github.io/twitter_security.pdf'>(Ritter et. al. WWW 2015)</a>.
+Traditional information extraction methods rely on painstaking annotation efforts that are both expensive and time-consuming.  To address this linguistic annotation bottleneck, I have developed new methods that can learn effectively without access to direct human supervision, instead learning from an existing knowledge base (KB).  This approach uses available knowledge-bases such as Wikipedia or Freebase to heuristically label large text corpora.  A major challenge, however, is the problem of label noise.  For example, facts that are mentioned in the text but missing in the KB lead to false negatives.  To address this issue, I proposed a novel structured learning approach that incorporates side-information through a missing data model <a href='https://aclweb.org/anthology/Q13-1030'>(Ritter et. al. TACL 2013)</a>.  More recently, I extended this approach with learned representations computed using a convolutional neural network that is trained end-to-end as part of a Latent Structured SVM <a href='https://arxiv.org/pdf/1904.00118.pdf'>(Bai and Ritter NAACL 2019)</a>.  By combining the benefits of structured learning and convolutional neural networks, our approach achieves state-of-the-art results on minimally supervised mention-level relation extraction, using only proposition-level supervision from a KB, without any human annotations.  In addition to developing improved methods for learning from less supervision, I have explored a number of applications of minimally supervised information extraction, for example: automatically updating Wikipedia by learning to extract events from news and social media <a href='https://dl.acm.org/citation.cfm?id=3038912.3052646'>(Konovalov et. al. WWW 2017)</a> and minimally supervised extraction of cybersecurity events <a href='https://aritter.github.io/twitter_security.pdf'>(Ritter et. al. WWW 2015)</a>.
 </p>
 
 <p>
@@ -73,24 +73,21 @@ I was one of the first researchers to recognize the importance of customizing na
 
 <h3>Research Funding:</h3>
 <div class='well'>
-<b>Pending Grants (selected for funding):</b>
-<ul>
-  <li><b>NSF</b> ($499,997), CAREER: Large-Scale Learning for Information Extraction (Recommended for Funding), 2019-2024, Role: PI</li>
-  <li><b>IARPA</b> ($850,000) Task and User-Aware Representation Learning for Fine-Grained Cross-Lingual Information Retrieval, Brown University subcontract, <a href='https://www.iarpa.gov/index.php/research-programs/better'>BETTER</a> program, 2019-2023, Role: Ohio State PI</li>
-  <li><b>DARPA</b> ($800,000) Logically Adaptive Molecular Design Automation (LAMDA), SRI International subcontract, <a href='https://www.darpa.mil/program/accelerated-molecular-discovery'>AMD</a> program, 2019-2023, Role: Ohio State PI</li>
-</ul>
 
 <b>Current Grants:</b>
 <ul>
+  <li><b>NSF</b> ($499,997), <a href='https://www.nsf.gov/awardsearch/showAward?AWD_ID=1845670'>CAREER: Large-Scale Learning for Information Extraction</a>, 2019-2024, Role: PI</li>
+  <li><b>IARPA</b> ($850,000) Task and User-Aware Representation Learning for Fine-Grained Cross-Lingual Information Retrieval, Brown University subcontract, <a href='https://www.iarpa.gov/index.php/research-programs/better'>BETTER</a> program, 2019-2023, Role: Ohio State PI</li>
+  <li><b>DARPA</b> ($800,000) Logically Adaptive Molecular Design Automation (LAMDA), SRI International subcontract, <a href='https://www.darpa.mil/program/accelerated-molecular-discovery'>AMD</a> program, 2019-2023, Role: Ohio State PI</li>
   <li><a href='https://ara.amazon-ml.com/recipients/#2018'><b>Amazon</b> Research Award</a>, ($50,000) Integrating Data-Driven Conversation in Open-Domain Question Answering, December, 2018, Role: PI</li>
   <li><a href='https://ailab.criteo.com/criteo-faculty-research-awards-2018/'><b>Criteo</b> Faculty Research Award</a> ($20,000) 2018, Role: Co-PI</li>
-  <li><b>IARPA</b> ($507,016) Extracting a Realtime Cybersecurity Knowledge Graph from Text, Leidos subcontract, <a href='https://www.iarpa.gov/index.php/research-programs/cause'>CAUSE program</a>, 2016-2019, Role: Ohio State PI</li>
   <li><b>DARPA</b> ($600,000) Modeling the Spread of Information through Social and Knowledge Graphs, Leidos subcontract, <a href='https://www.darpa.mil/program/computational-simulation-of-online-social-behavior'>SocialSim program</a>, 2017-2021, Role: Ohio State PI</li>
 </ul>
 
 <b>Past Grants:</b>
 <ul>
   <li><b>NSF</b> CRII, ($151,299) III: Learning to Extract Events from Knowledge Base Revisions, 2015-2018, Role: PI</li>
+  <li><b>IARPA</b> ($507,016) Extracting a Realtime Cybersecurity Knowledge Graph from Text, Leidos subcontract, <a href='https://www.iarpa.gov/index.php/research-programs/cause'>CAUSE program</a>, 2016-2019, Role: Ohio State PI</li>
   <li><b>Carnegie Mellon</b> Software Engineering Institute ($40,000) Events, relationships, and script learning for situational awareness, 1/2017-9/2017, Role: Ohio State PI</li>
   <li><b>NIH</b> ($100,000) Supporting systematic review production with article similarity network visualization, 2016-2018, Role: Co-PI</li>
   <li><a href='https://advance.osu.edu/battelle-engineering-technology-and-human-affairs-betha-grant-call-for-proposals/'><b>Battelle</b> BETHA Award</a> ($23,000) Trustworthiness in Social Media, 2017-2019, Role: Co-PI</li>
