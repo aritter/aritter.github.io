@@ -214,7 +214,7 @@ I am always looking for well-qualified students to work with on research related
 
 <div class='well'>
 <b>Alumni:</b>
-<ul>
+<ul id='alumni'>
   <li><a href='https://abaheti95.github.io/'>Ashutosh Baheti</a>  (MS - 2020, Ohio State University)</li>  
   <li><a href='http://sandeshs.github.io/'>Sandesh Swamy</a>  (MS - 2017, Ohio State University, co-advised with <a href='https://www.asc.ohio-state.edu/demarneffe.1/index.html'>Marie-Catherine de Marneffe</a>)</li>
   <li><a href='https://sites.google.com/site/jeniyatabassum/'>Jeniya Tabassum</a> (Ph.D. - 2020, Ohio State University, co-advised with <a href='https://cocoxu.github.io/'>Wei Xu</a>)</li>
@@ -284,10 +284,10 @@ Specifically my work focuses on <a href="http://en.wikipedia.org/wiki/Informatio
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
       ga('create', 'UA-2879579-2', 'auto');
       ga('send', 'pageview');
 
@@ -303,7 +303,7 @@ Specifically my work focuses on <a href="http://en.wikipedia.org/wiki/Informatio
 	  }
 	  return cached;
       }
-
+      
       function randomizeList(id)
       {
 	  var list = document.getElementById(id);
@@ -317,11 +317,12 @@ Specifically my work focuses on <a href="http://en.wikipedia.org/wiki/Informatio
 	  }
 	  list.style.display="block";
       }
-
+      
       function randomizeLists()
       {
 	  randomizeList("phd");
 	  randomizeList("undergrad");
+	  randomizeList("alumni");
       }
     </script>
 
