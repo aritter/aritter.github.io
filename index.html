@@ -30,7 +30,7 @@
     <link rel="apple-touch-icon-precomposed" href="./bootstrap/ico/apple-touch-icon-57-precomposed.png">
   </head>
 
-  <body>
+  <body onload="randomizeLists()">
 
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
@@ -195,7 +195,7 @@ I am always looking for well-qualified students to work with on research related
 
 <div class='well'>
 <b>Ph.D. Students:</b>
-<ul>
+<ul id="phd">
   <li><a href='https://bflashcp3f.github.io/'>Fan Bai</a></li>  
   <li><a href='https://edchengg.github.io/'>Yang Chen</a></li>
   <li><a href='https://ruohaog.netlify.app/'>Ruohao Guo</a></li>
@@ -205,9 +205,10 @@ I am always looking for well-qualified students to work with on research related
 </ul>
 
 <b>Undergraduate Researchers:</b>
-<ul>
+<ul id='undergrad'>
   <li>Ethan Mendes</li>
-  <li>Vedaant Shah</li>  
+  <li>Vedaant Shah</li>
+  <li>David He</li>  
 </ul>
 </div>
 
@@ -290,6 +291,38 @@ Specifically my work focuses on <a href="http://en.wikipedia.org/wiki/Informatio
       ga('create', 'UA-2879579-2', 'auto');
       ga('send', 'pageview');
 
+      function randomizeItems(items)
+      {
+	  var cached = items.slice(0), temp, i = cached.length, rand;
+	  while(--i)
+	  {
+              rand = Math.floor(i * Math.random());
+              temp = cached[rand];
+              cached[rand] = cached[i];
+              cached[i] = temp;
+	  }
+	  return cached;
+      }
+
+      function randomizeList(id)
+      {
+	  var list = document.getElementById(id);
+	  var nodes = list.children, i = 0;
+	  nodes = Array.prototype.slice.call(nodes);
+	  nodes = randomizeItems(nodes);
+	  while(i < nodes.length)
+	  {
+              list.appendChild(nodes[i]);
+              ++i;
+	  }
+	  list.style.display="block";
+      }
+
+      function randomizeLists()
+      {
+	  randomizeList("phd");
+	  randomizeList("undergrad");
+      }
     </script>
 
   </body>
